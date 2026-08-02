@@ -1,8 +1,8 @@
 # VerSaTrack Board
 
-Open-source STM32F407 development board designed for industrial automation, IoT applications, robotics, and embedded systems.
+Open-source reference hardware platform based on the STM32F407 microcontroller for industrial automation, IoT, robotics, and embedded applications.
 
-The VerSaTrack Board integrates high-speed communication, wireless connectivity, GPS positioning, external storage, and a graphical user interface into a compact hardware platform. This repository provides complete open-source hardware design files, including schematics, PCB layout, BOM, manufacturing files, and firmware examples.
+This repository provides the hardware schematic in PDF format for learning, reference, and hardware evaluation. Firmware, Altium Designer source files, and manufacturing files are **not included**.
 
 ---
 
@@ -13,12 +13,9 @@ The VerSaTrack Board integrates high-speed communication, wireless connectivity,
 - ESP32-C3 Wi-Fi Module
 - NEO-6M GPS Module
 - 2.4-inch SPI TFT LCD with Touch Interface
-- USB Type-C Programming & Communication
+- USB Type-C Interface
 - microSD Card Interface
 - Dual SPI Flash Memory
-- Industrial-grade Expansion Headers
-- Open Hardware Design Files
-- Altium Designer Project
 
 ---
 
@@ -28,34 +25,12 @@ The VerSaTrack Board integrates high-speed communication, wireless connectivity,
 |------|-------------|
 | MCU | STM32F407VGT6 |
 | Ethernet | W5500 |
-| Wireless | ESP32-C3 Wi-Fi |
+| Wireless | ESP32-C3 |
 | GPS | NEO-6M |
-| Display | 2.4" SPI TFT LCD |
-| Touch | Capacitive Touch |
+| Display | 2.4-inch SPI TFT LCD |
 | Storage | microSD + Dual SPI Flash |
 | USB | USB Type-C |
-| Programming | USB Serial |
-| Operating Voltage | 5V USB |
 | PCB | 4-Layer FR-4 |
-
----
-
-# Hardware Block Diagram
-
-```
-                 +-----------------------+
-                 |     STM32F407 MCU     |
-                 +----------+------------+
-                            |
-      +---------+-----------+-----------+-----------+
-      |         |           |           |           |
-      |         |           |           |           |
-  Ethernet     Wi-Fi       GPS      Display      Storage
-   W5500     ESP32-C3    NEO-6M   2.4" TFT LCD  microSD
-                                           |
-                                      Touch Panel
-
-```
 
 ---
 
@@ -64,25 +39,13 @@ The VerSaTrack Board integrates high-speed communication, wireless connectivity,
 ```
 .
 ├── Hardware
-│   ├── Altium_Project
-│   ├── Schematic
-│   ├── PCB
-│   ├── BOM
-│   ├── PDF
-│   └── Manufacturing_Files
-│       ├── Gerber
-│       ├── Pick_and_Place
-│       └── Assembly_Drawings
-│
-├── Firmware
-│   ├── STM32CubeIDE
-│   ├── Drivers
-│   ├── Libraries
-│   └── Examples
+│   └── Schematic
+│       └── VerSaTrack_Schematic.pdf
 │
 ├── Images
-│
-├── Datasheets
+│   ├── Board_Top.png
+│   ├── Board_Bottom.png
+│   └── 3D_View.png
 │
 ├── Documentation
 │
@@ -91,62 +54,36 @@ The VerSaTrack Board integrates high-speed communication, wireless connectivity,
 
 ---
 
-# Hardware Preview
+# Repository Contents
 
-> *(Add PCB images here)*
+Included:
 
-| Top View | Bottom View |
-|----------|-------------|
-| ![](Images/top.png) | ![](Images/bottom.png) |
+- Hardware Schematic (PDF)
+- Board Images
+- Hardware Documentation
 
----
+Not Included:
 
-# Software
-
-- STM32CubeIDE
-- STM32 HAL
-- FreeRTOS (Optional)
-- FATFS
-- LWIP
-- ESP32 AT Firmware
+- Firmware Source Code
+- Altium Designer Project Files
+- PCB Layout Files
+- Gerber Files
+- BOM
+- Manufacturing Files
 
 ---
 
-# Applications
+# Preview
 
-- Industrial Automation
-- IoT Gateway
-- Robotics Controller
-- Data Logger
-- GPS Tracking
-- Ethernet Communication
-- Human Machine Interface (HMI)
-
----
-
-# Getting Started
-
-1. Clone this repository
-
-```
-git clone https://github.com/Wetis121/VerSaTrack-Board.git
-```
-
-2. Open the Altium Designer project.
-
-3. Generate Manufacturing Files if required.
-
-4. Open the firmware using STM32CubeIDE.
-
-5. Compile and flash the firmware.
+*(Add board images here)*
 
 ---
 
 # License
 
-This project is released under the MIT License.
+The schematic PDF is provided for educational and reference purposes only.
 
-Feel free to use, modify, and contribute to this project.
+Please refer to the LICENSE file for usage terms.
 
 ---
 
@@ -155,5 +92,3 @@ Feel free to use, modify, and contribute to this project.
 **Wetis Klingram**
 
 Embedded Hardware Engineer
-
-GitHub: https://github.com/Wetis121
